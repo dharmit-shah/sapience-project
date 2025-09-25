@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/bootstrap.css">
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <script src="assets/js/bootstrap.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-    </head>
-    <body>
 
-        <section class="header_component">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- <section class="header_component">
             <div class="container d-flex justify-content-between align-items-center">
                 <a href="/" class="logo_box" title="Sapience">
                     <img src="./assets/img/logo.svg" alt="Logo">
@@ -25,7 +27,75 @@
                     <a href="javascript:void()" title="Book an appointment">Book an appointment</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-    </body>
+    <section class="header_component">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="logo_box" title="Sapience">
+                <img src="./assets/img/logo.svg" alt="Logo">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="header_menu d-flex">
+                <a href="javascript:void()" title="About Us">About Us</a>
+                <a href="javascript:void()" title="Service">Service</a>
+                <a href="javascript:void()" title="Contact Us">Contact Us</a>
+            </div>
+
+            <div class="book_appointment_btn d-none d-lg-block">
+                <a href="javascript:void()" title="Book an appointment">Book an appointment</a>
+            </div>
+
+            <!-- Hamburger Icon (Mobile) -->
+            <div class="hamburger d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Mobile Side Drawer -->
+        <div class="mobile_menu">
+            <div class="mobile_menu_header">
+                <a href="/" class="logo_box" title="Sapience">
+                    <img src="./assets/img/logo.svg" alt="Logo">
+                </a>
+                <div class="close_menu">&times;</div>
+            </div>
+            <div class="mobile_menu_links">
+                <a href="javascript:void()">About Us</a>
+                <a href="javascript:void()">Service</a>
+                <a href="javascript:void()">Contact Us</a>
+                <a href="javascript:void()" class="book_btn">Book an appointment</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- header drawer -->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const mobileMenu = document.querySelector(".mobile_menu");
+        const closeMenu = document.querySelector(".close_menu");
+
+        // Open side drawer
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.add("active");
+        });
+
+        // Close side drawer
+        closeMenu.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+        });
+
+        // Optional: close on link click
+        document.querySelectorAll(".mobile_menu_links a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+            });
+        });
+    </script>
+
+</body>
+
 </html>
