@@ -1,0 +1,59 @@
+* {box-sizing: border-box;}
+html {-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-family: Roboto;height: 100%;}
+body {margin: 0;min-height: 100%;font-family: Roboto,sans-serif;}
+a,p,h1,h2,h3,h4,h5,h6 {margin: 0;}
+input:focus-visible {outline: none;}
+a {text-decoration: none;color: var(--text);}
+:root {
+    --primary: rgba(47, 157, 150, 1);
+    --text: rgba(15, 23, 42, 1);
+    --white: rgba(255, 255, 255, 1);
+}
+/* font-face */
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-Light.ttf") format("truetype");font-weight: 300;font-style: normal;font-display: swap}
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-Regular.ttf") format("truetype");font-weight: 400;font-style: normal;font-display: swap;}
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-Medium.ttf") format("truetype");font-weight: 500;font-style: normal;font-display: swap;}
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-SemiBold.ttf") format("truetype");font-weight: 600;font-style: normal;font-display: swap;}
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-Bold.ttf") format("truetype");font-weight: 700;font-style: normal;font-display: swap;}
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-ExtraBold.ttf") format("truetype");font-weight: 800;font-style: normal;font-display: swap;}
+@font-face {font-family: "Roboto";src: url("../fonts/Roboto-Black.ttf") format("truetype");font-weight: 900;font-style: normal;font-display: swap;}
+
+/* header */
+.header_component{padding: 24px 0;}
+/* .header_component .container{display: flex;justify-content: space-between;align-items: center;} */
+.header_menu{gap: 36px;}
+.header_menu a{font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.5px;color: var(--text);}
+.logo_box{width: fit-content;}
+.logo_box img{height: 56px;width: auto;}
+.book_appointment_btn{opacity: 1;border-radius: 50px;border-width: 2px;padding: 12px 24px;background: rgba(47, 157, 150, 1);border: 2px solid rgba(47, 157, 150, 1);}
+.book_appointment_btn a{font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.5px;color: var(--white);}
+
+/* Footer */
+.footer_component .contact_detail h4{font-weight: 700;font-size: 20px;line-height: 140%;margin-bottom: 10px;}
+.footer_component .contact_detail .contact-name{margin-bottom: 10px;}
+.contact_detail a {display: flex;align-items: center;gap: 10px;}
+.contact_detail a svg{height: 20px;display: flex;align-items: center;gap: 10px;}
+
+/* services_section */
+.services_component{padding: 80px 0;}
+.services_section{display: grid;grid-template-columns: 1fr 1fr 1fr;align-items: start;}
+.services_box, .service_detail{display: flex;flex-direction: column;justify-content: center;align-items: center;gap: 10px;text-align: center;}
+.integrity_icon {border-radius: 100px;padding: 16px;display: flex;align-items: center;background: rgba(207, 250, 254, 1);}
+.integrity_icon img{height: 50px;width: 50px;}
+.transperancy_icon {border-radius: 100px;padding: 16px;display: flex;align-items: center;background: rgba(219, 234, 254, 1);}
+.transperancy_icon img{height: 50px;width: 50px;}
+.privacy_icon {border-radius: 100px;padding: 16px;display: flex;align-items: center;background: rgba(157, 168, 217, 1);}
+.privacy_icon img{height: 50px;width: 50px;}
+.service_detail h4{font-weight: 700;font-size: 24px;line-height: 110%;text-align: center;color: var(--text);}
+.service_detail p{font-size: 16px;line-height: 140%;text-align: center;color: var(--text);}
+
+
+
+
+
+
+
+
+@media (max-width:767px) {
+    .services_section{display: grid;grid-template-columns: 1fr;}
+}
