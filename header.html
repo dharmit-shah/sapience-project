@@ -13,22 +13,6 @@
 
 <body>
 
-    <!-- <section class="header_component">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a href="/" class="logo_box" title="Sapience">
-                    <img src="./assets/img/logo.svg" alt="Logo">
-                </a>
-                <div class="header_menu d-flex">
-                    <a href="javascript:void()" title="About Us">About Us</a>
-                    <a href="javascript:void()" title="Service">Service</a>
-                    <a href="javascript:void()" title="Contact Us">Contact Us</a>
-                </div>
-                <div class="book_appointment_btn">
-                    <a href="javascript:void()" title="Book an appointment">Book an appointment</a>
-                </div>
-            </div>
-        </section> -->
-
     <section class="header_component">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="logo_box" title="Sapience">
@@ -71,28 +55,15 @@
         </div>
     </section>
 
-
     <!-- header drawer -->
     <script>
         const hamburger = document.querySelector(".hamburger");
         const mobileMenu = document.querySelector(".mobile_menu");
         const closeMenu = document.querySelector(".close_menu");
-
-        // Open side drawer
-        hamburger.addEventListener("click", () => {
-            mobileMenu.classList.add("active");
-        });
-
-        // Close side drawer
-        closeMenu.addEventListener("click", () => {
-            mobileMenu.classList.remove("active");
-        });
-
-        // Optional: close on link click
+        hamburger.addEventListener("click", () => { mobileMenu.classList.add("active"); });
+        closeMenu.addEventListener("click", () => { mobileMenu.classList.remove("active"); });
         document.querySelectorAll(".mobile_menu_links a").forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-            });
+            link.addEventListener("click", () => { mobileMenu.classList.remove("active"); });
         });
     </script>
 
